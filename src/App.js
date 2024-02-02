@@ -1,5 +1,6 @@
 import './App.css';
 import InputText from './components/InputText';
+import NextPreviousButton from './components/NextPreviousButton';
 import TextArea from './components/TextArea';
 
 function App() {
@@ -21,7 +22,10 @@ function App() {
       <InputText></InputText>
       <InputText></InputText>
       <InputText></InputText>
-
+      <div className='btn-container'>
+      <NextPreviousButton name={'Previous'} color={'btn-outline-primary'}></NextPreviousButton>
+      <NextPreviousButton name={'Next'} color={'btn-primary'}></NextPreviousButton>
+      </div>
       </div>
     </div>
   );
