@@ -1,4 +1,5 @@
 import './App.css';
+import TextArea from './components/TextArea';
 
 function App() {
   // mcq array
@@ -10,8 +11,10 @@ function App() {
   // --------advance
   // after clickcing the complete button generate mcq with random option (HTML file)
   return (
-    <div className="App">
-      
+    <div className="container">
+      <div className='main-container'>
+      <TextArea></TextArea>
+      </div>
     </div>
   );
 }
