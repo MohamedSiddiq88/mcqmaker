@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-function TextArea({tempQustion,setTempQuestion}) {
+function TextArea({tempQuestion,setTempQuestion}) {
+
   return (
     <div>
-      <textarea className='question-text' value={tempQustion} onChange={(e)=>setTempQuestion(e.target.value)}></textarea>
+      <textarea className='question-text' value={tempQuestion} onChange={(e)=>setTempQuestion(e.target.value)}></textarea>
     </div>
   )
 }

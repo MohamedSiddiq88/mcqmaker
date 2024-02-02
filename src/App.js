@@ -14,26 +14,66 @@ function App() {
   // complete button
   // --------advance
   // after clickcing the complete button generate mcq with random option (HTML file)
-const [tempQuestion,setTempQuestion] = useState("");   
+const [tempQuestion,setTempQuestion] = useState("");
+    const [indexOfQuestion,setIndexOfQuestion]=useState(1);
+const [option,setOption]=useState(['','','','']);
+
+
   return (
     <div className="container-fluid parent">
       <div className='main-container'>
-      <label>Question</label>
-      <TextArea tempQuestion={tempQuestion}
-      setTempQuestion={setTempQuestion}></TextArea>
+      <label>Question {indexOfQuestion}</label>
+      <TextArea 
+      tempQuestion={tempQuestion}
+      setTempQuestion={setTempQuestion}
+      ></TextArea>
       <label>Options</label>
-      <InputText></InputText>
-      <InputText></InputText>
-      <InputText></InputText>
-      <InputText></InputText>
+      {
+        option.map((ele,ind)=>(
+          <InputText option={option[ind]} 
+          setOption={(newValue)=>{
+            const newOptions=[...option];
+            newOptions[ind]=newValue;
+            setOption(newOptions);
+          }}key={ind}></InputText>
+        ))
+      }
+
+      {/* <InputText option={optionA} setOption={setOptionA} ></InputText>
+      <InputText option={optionB} setOption={setOptionB} ></InputText>
+      <InputText option={optionC} setOption={setOptionC} ></InputText>
+      <InputText option={optionD} setOption={setOptionD} ></InputText> */}
+      
       <div className='btn-main-container'>
         <div className='dummy'>
           {/* dummy */}
           complete    
         </div>
       <div className='btn-container'>
-      <NextPreviousButton name={'Previous'} color={'btn-outline-primary'}></NextPreviousButton>
-      <NextPreviousButton name={'Next'} color={'btn-primary'} tempQuestion={tempQuestion}></NextPreviousButton>
+
+      <NextPreviousButton 
+      name={'Previous'} 
+      color={'btn-outline-primary'}
+      tempQuestion={tempQuestion}
+      setTempQuestion={setTempQuestion}
+      option={option}
+      setOption={setOption}
+      index={indexOfQuestion}
+      setIndex={setIndexOfQuestion}
+      ></NextPreviousButton>
+
+
+      <NextPreviousButton 
+      name={'Next'} 
+      color={'btn-primary'} 
+      tempQuestion={tempQuestion}
+      setTempQuestion={setTempQuestion}
+      // option={[optionA,optionB,optionC,optionD]}
+      option={option}
+      setOption={setOption}
+      index={indexOfQuestion}
+      setIndex={setIndexOfQuestion}
+      ></NextPreviousButton>
       </div>
       <CompleteButton></CompleteButton>
       </div>

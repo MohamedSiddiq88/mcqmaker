@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function InputText() {
+function InputText({option,setOption}) {
+
   return (
     <div>
-      <textarea className='option-text'></textarea>
+      <textarea className='option-text' value={option} onChange={(e)=>setOption(e.target.value)}></textarea>
     </div>
   )
 }
