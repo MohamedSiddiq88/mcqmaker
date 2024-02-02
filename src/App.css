@@ -10,7 +10,9 @@
 }
 
 label{
-    
+    font-size: xx-large;
+    color: goldenrod;
+    font-weight: bolder;
 }
 
 .question-text{
@@ -34,6 +36,16 @@ label{
 .btn-container{
     display: flex;
     justify-content: center;
+    
+}
+
+.btn-main-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dummy{
+    color: rgba(255, 255, 255, 0);
 }
 
 .nextprevious{
