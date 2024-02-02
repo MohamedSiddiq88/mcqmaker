@@ -1,3 +1,10 @@
+.parent{
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
 .main-container{
     margin: auto;
+    /* border: 1px solid black; */
+    width: fit-content;
 }

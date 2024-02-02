@@ -11,7 +11,7 @@ function App() {
   // --------advance
   // after clickcing the complete button generate mcq with random option (HTML file)
   return (
-    <div className="container">
+    <div className="container parent">
       <div className='main-container'>
       <TextArea></TextArea>
       </div>
