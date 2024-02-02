@@ -14,14 +14,13 @@ function App() {
   // complete button
   // --------advance
   // after clickcing the complete button generate mcq with random option (HTML file)
-  
-  const [question,setQuestion] = useState([]);
-  const [options,setOptions] = useState([]);
+const [tempQuestion,setTempQuestion] = useState("");   
   return (
     <div className="container-fluid parent">
       <div className='main-container'>
       <label>Question</label>
-      <TextArea></TextArea>
+      <TextArea tempQuestion={tempQuestion}
+      setTempQuestion={setTempQuestion}></TextArea>
       <label>Options</label>
       <InputText></InputText>
       <InputText></InputText>
@@ -34,7 +33,7 @@ function App() {
         </div>
       <div className='btn-container'>
       <NextPreviousButton name={'Previous'} color={'btn-outline-primary'}></NextPreviousButton>
-      <NextPreviousButton name={'Next'} color={'btn-primary'}></NextPreviousButton>
+      <NextPreviousButton name={'Next'} color={'btn-primary'} tempQuestion={tempQuestion}></NextPreviousButton>
       </div>
       <CompleteButton></CompleteButton>
       </div>

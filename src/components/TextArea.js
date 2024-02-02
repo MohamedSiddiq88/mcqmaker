@@ -1,9 +1,9 @@
 import React from 'react'
 
-function TextArea() {
+function TextArea({tempQustion,setTempQuestion}) {
   return (
     <div>
-      <textarea className='question-text'></textarea>
+      <textarea className='question-text' value={tempQustion} onChange={(e)=>setTempQuestion(e.target.value)}></textarea>
     </div>
   )
 }
