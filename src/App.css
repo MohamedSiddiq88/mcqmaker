@@ -9,16 +9,26 @@
     width: fit-content;
 }
 
+label{
+    
+}
+
 .question-text{
     width: 60vw;
     height: 40vh;
     margin-bottom: 1rem;
+    border-color: goldenrod ;
+    border-style: solid;
+    border-radius: 0.5rem;
 }
 
 .option-text{
     width: 60vw;
     height: 5vh;
     margin-bottom: 1rem;
+    border-color: #DEB887 ;
+    border-style: solid;
+    border-radius: 0.5rem;
 }
 
 .btn-container{
