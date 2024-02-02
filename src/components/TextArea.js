@@ -3,7 +3,7 @@ import React from 'react'
 function TextArea() {
   return (
     <div>
-      <textarea ></textarea>
+      <textarea className='question-text'></textarea>
     </div>
   )
 }

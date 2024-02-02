@@ -1,4 +1,5 @@
 import './App.css';
+import InputText from './components/InputText';
 import TextArea from './components/TextArea';
 
 function App() {
@@ -13,7 +14,14 @@ function App() {
   return (
     <div className="container parent">
       <div className='main-container'>
+      <label>Question</label>
       <TextArea></TextArea>
+      <label>Options</label>
+      <InputText></InputText>
+      <InputText></InputText>
+      <InputText></InputText>
+      <InputText></InputText>
+
       </div>
     </div>
   );
